@@ -13,6 +13,6 @@ clang \
  -c hello.bpf.c \
  -o hello.bpf.o
 
-# ESTO GENERA el archivo .o (BPF bytecode)?. El codigo que muestra este comando es lo que ayuda al codigo GO a saber como insertar los bytecodes en el kernel
+# Esto genera el archivo .o (BPF bytecode)?. El codigo que muestra este comando es lo que ayuda al codigo GO a saber como insertar los bytecodes en el kernel
 
 3. Ejecutar: readelf -a hello.bpf.o

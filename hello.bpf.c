@@ -21,16 +21,3 @@ int hello(void *ctx) {
     bpf_ringbuf_submit(e, 0);
     return 0;
 }
-
-SEC("kprobe/sys_execve")
-int hello(void *ctx) {
-    struct event *e;
-
-    e = bpf_ringbuf_reserve(&events, sizeof(*e), 0);
-    if (!e)
-        return 0;
-
-    __builtin_memcpy(e->msg, "Hello Lautaro!", 14);
-    bpf_ringbuf_submit(e, 0);
-    return 0;
-}
