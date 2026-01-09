@@ -22,8 +22,7 @@ func main(){
 
 	// El codigo c esta escribiendo infrmacion de tracing cada vez que algo llama a esa syscall y se necesita
 	// algo desde el espacio de usuario para imprimirlo
-	rb, _ := b.InitRingBuf("events", callback)
-    rb.Start()
+	//bpf.TracePrint()
 	println("Cleaning up!")
 
 }
