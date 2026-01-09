@@ -1,6 +1,6 @@
 ARCH=$(shell uname -m)
 
-TARGET := hello
+TARGET := kprobe
 TARGET_BPF := $(TARGET).bpf.o
 
 GO_SRC := *.go

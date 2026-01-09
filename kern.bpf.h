@@ -2,8 +2,15 @@
 #define __HELLO_BPF_H__
 
 #include "vmlinux.h"
+
 #include <bpf/bpf_helpers.h>
 #include <bpf/bpf_tracing.h>
+
+/* Headers de red (XDP) */
+#include <linux/if_ether.h>
+#include <linux/ip.h>
+#include <linux/tcp.h>
+#include <linux/udp.h>
 
 /* Tipos explícitos */
 typedef __u8  u8;
