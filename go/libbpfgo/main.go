@@ -34,31 +34,39 @@ package main
 // 	}
 //
 
-import (
-	"log"
+// import (
+// 	"log"
+// )
 
-	xdp "github.com/mdlayher/socket/xdp"
-)
+// func main(){
 
-func main(){
+// umem, err := xdp.NewUMEM(&xdp.UMEMConfig{
+//     FrameSize:  2048,
+//     FrameCount: 4096,
+// })
 
-umem, err := xdp.NewUMEM(&xdp.UMEMConfig{
-    FrameSize:  2048,
-    FrameCount: 4096,
-})
+// xsk, err := xdp.NewSocket(
+//     umem,
+//     &xdp.SocketConfig{
+//         NumRXDescriptors: 1024,
+//         NumTXDescriptors: 0,
+//     },
+// )
+// if err != nil {
+//     log.Fatalf("new socket: %v", err)
+// }
+// defer xsk.Close()
 
-xsk, err := xdp.NewSocket(
-    umem,
-    &xdp.SocketConfig{
-        NumRXDescriptors: 1024,
-        NumTXDescriptors: 0,
-    },
-)
-if err != nil {
-    log.Fatalf("new socket: %v", err)
-}
-defer xsk.Close()
+// 	p, err := b.GetProgram("hello")// obtener la funcion/programa hello
+// 	must(err)
 
+// 	_, err = p.AttachKprobe("__x64_sys_execve") // ADJUNTAR EL PROGRAMA A KPROBE
+// 	must(err)
 
-}
+// 	// El codigo c esta escribiendo infrmacion de tracing cada vez que algo llama a esa syscall y se necesita
+// 	// algo desde el espacio de usuario para imprimirlo
+// 	//bpf.TracePrint()
+// 	println("Cleaning up!")
+
+// }
 
